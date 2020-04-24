@@ -1,0 +1,62 @@
+body{
+    text-align: center;
+    justify-content: center;
+    align-items:center ;
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+}
+div{
+    border-radius: 20px;
+    background: #FBD786;  /* fallback for old browsers */
+box-shadow: 7px 10px 12px -5px;
+}
+img{
+    max-height: 10rem;
+    width: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    transition-property: fade-in ;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+h1{
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-around;
+}
+#scoreboard{
+    margin: 2rem;
+    width: 30rem;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+
+}
+#battlefield{
+    margin-bottom: 2rem;
+    width: 45rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+#sign{
+    font-size: 10rem;
+}
+
+button{
+    border-radius: 0;
+    height: 5rem;
+    width: 15rem;
+}
