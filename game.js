@@ -29,22 +29,41 @@ const emojiData = {
 playButton.addEventListener("click",function(){
     let p1 = (Math.floor(Math.random()*10)+1);
     let p2 = (Math.floor(Math.random()*10)+1);
+    playButton.setAttribute('disabled', 'true');
+    emoji1.classList.add('bounceInLeft',"animated");
+    emoji2.classList.add('bounceInRight',"animated");
+    sign.style.visibility = 'hidden';
+    setTimeout(function(){
+        sign.classList.add("flipInX","animated");
+        sign.style.visibility = 'visible';
+        console.log("hello");
+    },500);
 
+    setTimeout(function(){
+        emoji1.classList.remove('bounceInLeft',"animated");
+        emoji2.classList.remove('bounceInRight',"animated");
+        sign.classList.remove("flipInX","animated");
+        playButton.removeAttribute('disabled');
+    }, 1000);
     emoji1.src = "emojis/" + emojiData[p1];
     emoji2.src = "emojis/" + emojiData[p2];
 
     if(p1>p2){
         score1++;
         sign.textContent = ">"
+        sign.style.color = "green"
     }else if(p1<p2){
         score2++;
         sign.textContent = "<"
+        sign.style.color = "red"
+
     }else if(p1=p2){
         sign.textContent = "="
+        sign.style.color = "black"
+
 
     }
     p1Display.textContent = score1; 
     p2Display.textContent = score2; 
 
 });
-
